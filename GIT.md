@@ -18,6 +18,7 @@
     - [合并分支](#%e5%90%88%e5%b9%b6%e5%88%86%e6%94%af)
     - [解决冲突](#%e8%a7%a3%e5%86%b3%e5%86%b2%e7%aa%81)
 - [GIT文件管理机制](#git%e6%96%87%e4%bb%b6%e7%ae%a1%e7%90%86%e6%9c%ba%e5%88%b6)
+  - [推送](#%e6%8e%a8%e9%80%81)
 
 ## 初始化本地仓库
     git init
@@ -39,7 +40,7 @@
 
         
     系统用户级别:登陆当前操作系统的用户范围
->git config --global user.name Kita_Shizuku
+>git config --global user.name Kitayama_Shizuku
 
 >git config --global user.email
         kitayama_glb@shizuku.com
@@ -260,7 +261,26 @@ HEAD@{num} 表示要回退某一版本的步数
  每个快照保存parent的hush
 
  ##GITHUB
- 
+>git remote -v
+
+>git remote add [别名] [地址]
+
+    tig     https://github.com/ZunbaRan/TIG_BUHTIG.git (fetch)
+    tig     https://github.com/ZunbaRan/TIG_BUHTIG.git (push)
+
+fetch地址用来取回
+push地址用来推送
+
+### 推送
+>git config --global credential.helper store
+
+第一次登陆输入用户名密码 , 记住用户名密码下次不用输入
+
+>git pull origin master --allow-unrelated-histories 
+
+把远程仓库和本地同步，消除差异
+>git push [别名][分支]
+
 
 
 
