@@ -19,6 +19,9 @@
     - [解决冲突](#%e8%a7%a3%e5%86%b3%e5%86%b2%e7%aa%81)
 - [GIT文件管理机制](#git%e6%96%87%e4%bb%b6%e7%ae%a1%e7%90%86%e6%9c%ba%e5%88%b6)
   - [推送](#%e6%8e%a8%e9%80%81)
+  - [克隆](#%e5%85%8b%e9%9a%86)
+  - [邀请加入团队](#%e9%82%80%e8%af%b7%e5%8a%a0%e5%85%a5%e5%9b%a2%e9%98%9f)
+  - [拉取](#%e6%8b%89%e5%8f%96)
 
 ## 初始化本地仓库
     git init
@@ -281,6 +284,40 @@ push地址用来推送
 把远程仓库和本地同步，消除差异
 >git push [别名][分支]
 
+### 克隆
+>git clone [远程地址]
 
+- 完整的把远程库下载到本地
+- 创建origin远程地址别名
+- 初始化本地库
 
+### 邀请加入团队
+
+Settings -> Collaborators -> 邀请人的账号 -> add Collaborator
+
+变成团队成员之后才可以推送
+
+### 拉取
+**fetch merge
+相当于两个操作的合并**
+
+1. pull-fetch+merge
+2. git fetch [远程库地址别名][远程分支别名]
+3. git merge [远程库地址别名][远程分支别名]
+
+>git fetch origin master
+    
+    只是把远程内容下载到本地,并没有改本地工作区的文件
+
+>git checkout origin/master
+
+    切换到远程内容,可以查看文件内容
+
+>git checkout master
+
+    切换回原本的工作区
+
+>git merge origin/master
+
+    把远程的master合并到本地的master
 
