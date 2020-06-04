@@ -275,6 +275,19 @@ fetch地址用来取回
 push地址用来推送
 
 ### 推送
+…or create a new repository on the command line
+echo "# JavaBasePes" >> README.md
+>git init
+>git add README.md
+>git commit -m "first commit"
+>git remote add origin https://github.com/ZunbaRan/JavaBasePes.git
+>git push -u origin master
+
+…or push an existing repository from the command line
+>git remote add origin https://github.com/ZunbaRan/JavaBasePes.git
+>git push -u origin master
+
+以下命令已经全部忘记作用了
 >git config --global credential.helper store
 
 第一次登陆输入用户名密码 , 记住用户名密码下次不用输入
